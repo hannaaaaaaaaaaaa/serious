@@ -36,7 +36,7 @@ expr = st.text_input(
 )
 
 # 범위 설정
-x_min, x_max = st.slider("x 값 범위", -100, 100, (-20, 20))
+x_min, x_max = st.slider("x 값 범위", -100, 100, (-50, 50))
 y_min, y_max = st.slider("y 값 범위", -100, 100, (-50, 50))
 
 check_btn = st.button("함수인가요?")
