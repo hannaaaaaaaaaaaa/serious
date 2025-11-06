@@ -8,10 +8,11 @@ st.set_page_config(page_title="함수인가요?", page_icon="🧮")
 
 st.title("🧮 함수인가요?")
 st.write("관계식을 입력하고, 이 식이 **함수인지 아닌지** 그래프를 통해 확인해보세요. ")
-st.write("곱하기는 * 로 입력해야 컴퓨터가 이해해요 예시 : 2x → 2*x, 3(x+1) → 3*(x+1).")
+st.write("곱하기는 * 로 입력해야 컴퓨터가 이해해요 예시 : 2x → 2x, 3(x+1) → 3(x+1).")
 st.write("거듭제곱은 ** 로 입력해야 컴퓨터가 이해해요 예시 : x² → x**2.")
 
-st.markdown("예시: `y = x + 2`, `y = x**2`, `x = y**2`, `y = ±x`, `y = 1/x`, `y = (x+1)/(x-2)`")
+
+st.markdown("예시: `y = x + 2`, `y = x**2`, `x = y**2`, `y = - 4` 'x = 3', `y = 1/x`")
 
 # ----- 예시 버튼 -----
 col1, col2, col3 = st.columns(3)
@@ -25,11 +26,16 @@ with col3:
     if st.button("x = y**2 "):
         st.session_state["expr"] = "x = y**2"
 
-col4, col5 = st.columns(2)
+col4, col5, col6 = st.columns(3)
 with col4:
-    if st.button("y = ±x "):
-        st.session_state["expr"] = "y = ±x"
+    if st.button("y = - 4"):
+        st.session_state["expr"] = "y = - 4"
+
 with col5:
+    if st.button("x = 3"):
+        st.session_state["expr"] = "x = 3"
+
+with col6:
     if st.button("y = 1/x"):
         st.session_state["expr"] = "y = 1/x"
 
