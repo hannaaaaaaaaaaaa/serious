@@ -12,7 +12,7 @@ st.write("곱하기는 * 로 입력해야 컴퓨터가 이해해요 예시 : 2x 
 st.write("거듭제곱은 ** 로 입력해야 컴퓨터가 이해해요 예시 : x² → x**2.")
 
 
-st.markdown("예시: `y = x + 2`, `y = x**2`, `x = y**2`, `y = - 4` 'x = 3', `y = 1/x`")
+st.markdown("예시")
 
 # ----- 예시 버튼 -----
 col1, col2, col3 = st.columns(3)
@@ -47,7 +47,7 @@ expr = st.text_input(
 
 # 범위 설정
 x_min, x_max = st.slider("x 값 범위", -20, 20, (-8, 8))
-y_min, y_max = st.slider("y 값 범위 (보이는 범위)", -20, 20, (-8, 8))
+y_min, y_max = st.slider("y 값 범위 (보이는 범위)", -8, 8, (-4, 4))
 
 check_btn = st.button("함수인가요?")
 
